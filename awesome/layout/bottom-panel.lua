@@ -69,12 +69,12 @@ local bottom_panel = function(s)
 
 	local add_button 		= build_widget(require('widget.open-default-app')(s))
 	s.search_apps			= build_widget(require('widget.search-apps')())
-	s.control_center_toggle = build_widget(require('widget.control-center-toggle')())
-	s.global_search			= build_widget(require('widget.global-search')())
+	--s.control_center_toggle = build_widget(require('widget.control-center-toggle')())
+	--s.global_search			= build_widget(require('widget.global-search')())
 	s.info_center_toggle 	= build_widget(require('widget.info-center-toggle')())
 	s.tray_toggler  		= build_widget(require('widget.tray-toggle'))
-	s.updater 				= build_widget(require('widget.package-updater')())
-	s.screen_rec 			= build_widget(require('widget.screen-recorder')())
+	--s.updater 				= build_widget(require('widget.package-updater')())
+	----s.screen_rec 			= build_widget(require('widget.screen-recorder')())
 	s.bluetooth   			= build_widget(require('widget.bluetooth')())
 	s.network       		= build_widget(require('widget.network')())
 	local clock 			= build_widget(require('widget.clock')(s))
@@ -90,8 +90,8 @@ local bottom_panel = function(s)
 				layout = wibox.layout.fixed.horizontal,
 				spacing = dpi(5),
 				s.search_apps,
-				s.control_center_toggle,
-				s.global_search,
+				--s.control_center_toggle,
+				--s.global_search,
 				build_widget(tag_list(s)),
 				build_widget(task_list(s)),
 				add_button
@@ -106,8 +106,8 @@ local bottom_panel = function(s)
 					widget = wibox.container.margin
 				},
 				s.tray_toggler,
-				s.updater,
-				s.screen_rec,
+				--s.updater,
+				--s.screen_rec,
 				s.network,
 				s.bluetooth,
 				s.battery,
