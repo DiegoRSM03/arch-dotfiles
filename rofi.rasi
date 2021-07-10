@@ -1,0 +1,97 @@
+configuration {
+    show-icons: true;
+    font: "SF Pro Display 12";
+    display-drun: "#";
+    drun-display-format: "{name}";
+    sidebar-mode: true;
+    fullscreen: true;
+}
+
+* {
+    background-color: transparent;
+    background: #5B60711A;
+    background-alt: #FFFFFF10;
+    text-color: #EFEFEF;
+    primary: #A3BE8C;
+    urgent: #BF616A;
+}
+
+window {
+    height: 100%;
+    width: 100%;
+    transparency: "real";
+    background-color: rgba(0, 0, 0, 40%);
+}
+
+inputbar {
+    background-color: @background-alt;
+    text-color: @foreground;
+    border-radius: 10;
+    padding: 1.5%;
+}
+
+prompt {
+    enabled: true;
+    margin: 0 1% 0 0;
+}
+
+entry {
+    font: "SF Pro Display 12";
+    placeholder-color: #888888;
+    placeholder: "Search Applications";
+    blink: true;
+
+    expand: false;
+    width: 50%;
+}
+
+mainbox {
+    children: [ inputbar, listview ];
+    margin: 10% 13% 10% 13%;
+}
+
+listview {
+    columns: 5;
+    fixed-columns: true;
+
+    layout: vertical;
+    margin: 8% 0 3%;
+    spacing: 15px;
+}
+
+element {
+    orientation: vertical;
+    padding: 1% 0;
+    border-radius: 10;
+}
+
+element normal.urgent, element alternate.urgent {
+    background-color: @urgent;
+}
+
+element normal.active, element alternate.active {
+    background-color: @background-alt;
+    color: @selected-text-color;
+}
+
+element selected {
+    background-color: @background-alt;
+}
+
+element selected.urgent {
+    background-color: @urgent;
+}
+
+element selected.active {
+    background-color: @background-alt;
+}
+
+element-icon {
+    size: 9%;
+}
+
+element-text {
+    font: "SF Pro Display 9";
+    color: inherit;
+    horizontal-align: 0.5;
+}

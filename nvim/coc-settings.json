@@ -1,0 +1,11 @@
+{
+  "eslint.autoFixOnSave": true,
+  "eslint.filetypes": ["javascript", "typescript", "vue"],
+  "eslint.enable": false,
+
+  "vetur.validation.template": false,
+  "vetur.trace.server": "verbose",
+  "vetur.dev.logLevel": "DEBUG",
+  "vetur.dev.vlsPath": "/home/diego/.config/coc/extensions/node_modules/coc-vetur/node_modules/vls",
+  "vetur.experimental.templateInterpolationService": false
+}
