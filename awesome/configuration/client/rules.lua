@@ -29,8 +29,8 @@ ruled.client.connect_signal(
 				placement = awful.placement.no_overlap + awful.placement.no_offscreen
 			}
 		}
-
-		ruled.client.append_rule {
+	
+		[[--ruled.client.append_rule {
 			id = 'round_clients',
 			rule_any = {
 				type = {
@@ -45,7 +45,7 @@ ruled.client.connect_signal(
 				round_corners = true,
 				shape = beautiful.client_shape_rounded
 			}
-		}
+		}--]]
 
 		-- Titlebar rules
 		ruled.client.append_rule {
