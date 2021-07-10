@@ -9,9 +9,45 @@ local modkey = require('configuration.keys.mod').mod_key
 local altkey = require('configuration.keys.mod').alt_key
 local apps = require('configuration.apps')
 
+local function raise_client()
+	if client.focus then
+		client.focus:raise()
+	end
+end
+
 -- Key bindings
 local global_keys = awful.util.table.join(
-	-- Customs
+	-- Customs switch between clients
+	awful.key({modkey}, "j",
+		function()
+			awful.client.focus.bydirection("down")
+			raise_client()
+		end,
+		{description = "focus down", group = "client"}
+	),
+	awful.key({modkey}, "k",
+		function()
+			awful.client.focus.bydirection("up")
+			raise_client()
+		end,
+		{description = "focus up", group = "client"}
+	),
+	awful.key({modkey}, "h",
+		function()
+			awful.client.focus.bydirection("left")
+			raise_client()
+		end,
+		{description = "focus left", group = "client"}
+	),
+	awful.key({modkey}, "l",
+		function()
+			awful.client.focus.bydirection("right")
+			raise_client()
+		end,
+		{description = "focus right", group = "client"}
+	),
+
+	-- Customs spawns
 	awful.key(
 		{modkey},
 		'm',
@@ -20,6 +56,7 @@ local global_keys = awful.util.table.join(
 		end,
 		{description = 'open rofi launcher', group = 'custom'}
 	),
+
 	-- Hotkeys
 	awful.key(
 		{modkey}, 
@@ -377,14 +414,14 @@ local global_keys = awful.util.table.join(
 		end, 
 		{description = 'toggle systray visibility', group = 'Utility'}
 	),
-	awful.key(
-		{modkey},
-		'l',
-		function()
-			awful.spawn(apps.default.lock, false)
-		end,
-		{description = 'lock the screen', group = 'Utility'}
-	),
+	--awful.key(
+		--{modkey},
+		--'l',
+		--function()
+			--awful.spawn(apps.default.lock, false)
+		--end,
+		--{description = 'lock the screen', group = 'Utility'}
+	--),
 	awful.key(
 		{modkey}, 
 		'Return',

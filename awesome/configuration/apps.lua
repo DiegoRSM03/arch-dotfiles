@@ -43,7 +43,7 @@ return {
 							'/configuration/rofi/global/rofi.rasi',
 		-- Default app menu
 		rofi_appmenu = 'rofi -dpi ' .. screen.primary.dpi ..
-							' -show drun -theme ' .. '/usr/share/rofi/themes/mac-os.rasi' --config_dir ..
+							' -show drun -theme ' .. '/usr/share/rofi/themes/macos.rasi' --config_dir ..
 							--'/configuration/rofi/appmenu/rofi.rasi'
 
 		-- You can add more default applications here
