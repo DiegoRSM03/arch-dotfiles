@@ -24,7 +24,7 @@
 
 ## Some instructions
 
-* Neovim:         Install 'xsel' package for use system's clipboard.
+* Neovim:         Install 'xsel' package for use system's clipboard. Install languages servers through npm -g
 * Zsh Themes:     Install correctly zsh themes before put them in '.zshrc'.
 * Rofi:           Change the name of the rofi.rasi if u want.
 * Kvantum:        Enable 'Shadowless menus and tooltips' option in 'Compositing and General look' tab,
