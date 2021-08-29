@@ -2,9 +2,9 @@ return {
 	widget = {
 		email  = {
 			-- Email address
-			address = '',
+			address = 'diegorsm03@gmail.com',
 			-- App password
-			app_password = '',
+			app_password = 'dxcegjzyueririnx',
 			-- Imap server
 			imap_server = 'imap.gmail.com',
 			-- Port
@@ -13,9 +13,9 @@ return {
 
 		weather = {
 			-- API Key
-			key = '',
+			key = 'be088d78f70b45920e0efe008827f868',
 			-- City ID
-			city_id = '',
+			city_id = '3860259',
 			-- Units
 			units = 'metric',
 			-- Update in N seconds

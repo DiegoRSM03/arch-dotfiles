@@ -24,7 +24,7 @@ return {
 		-- Default IDE
 		development = '',
 		-- Default network manager
-		network_manager = 'alacritty iwctl',
+		network_manager = 'alacritty nmcli',
 		-- Default bluetooth manager
 		bluetooth_manager = 'blueman-manager',
 		-- Default power manager

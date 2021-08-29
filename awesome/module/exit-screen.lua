@@ -48,7 +48,7 @@ local msg_table = {
 
 local greeter_message = wibox.widget {
 	markup = 'Choose wisely!',
-	font = 'Poppins UltraLight 48',
+	font = 'Poppins Light 48',
 	align = 'center',
 	valign = 'center',
 	widget = wibox.widget.textbox
