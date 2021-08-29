@@ -29,10 +29,12 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'tyrannicaltoucan/vim-quantum'
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 
-" LSP
+" Neovim 0.5 Features (LSP, Telescope)
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
 Plug 'glepnir/lspsaga.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
 " Functionalities
 Plug 'scrooloose/nerdcommenter'
@@ -288,10 +290,10 @@ nmap <leader>r :so ~/.config/nvim/init.vim<CR>
 nmap <leader>t :call TrimWhitespace()<CR>
 nmap <leader>sh <C-w>s<C-w>j:terminal<CR>
 nmap <leader>sv <C-w>v<C-w>l:terminal<CR>
-nmap <leader>f :Files /<CR>
 nmap <leader>j :set filetype=journal<CR>
 nmap <leader>k :ColorToggle<CR>
 nnoremap <silent>K :Lspsaga hover_doc<CR>
+nnoremap <leader>f <cmd>Telescope find_files<cr>
 
 " Save files with ,w
 :nmap <c-s> :w<CR>
