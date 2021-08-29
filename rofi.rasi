@@ -36,7 +36,7 @@ prompt {
 }
 
 entry {
-    font: "SF Pro Display 12";
+    font: "Poppins 12";
     placeholder-color: #888888;
     placeholder: "Search Applications";
     blink: true;
@@ -91,7 +91,7 @@ element-icon {
 }
 
 element-text {
-    font: "SF Pro Display 9";
+    font: "Poppins 9";
     color: inherit;
     horizontal-align: 0.5;
 }
