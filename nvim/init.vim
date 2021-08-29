@@ -29,6 +29,11 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'tyrannicaltoucan/vim-quantum'
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 
+" LSP
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/completion-nvim'
+Plug 'glepnir/lspsaga.nvim'
+
 " Functionalities
 Plug 'scrooloose/nerdcommenter'
 Plug 'kyazdani42/nvim-tree.lua'
@@ -42,8 +47,6 @@ Plug 'Yggdroot/indentLine'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
-Plug 'neoclide/coc.nvim'
-Plug 'rafcamlet/coc-nvim-lua'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh'}
 Plug 'alvan/vim-closetag'
@@ -51,6 +54,10 @@ Plug 'wellle/targets.vim'
 Plug 'cometsong/CommentFrame.vim'
 
 call plug#end()
+
+
+
+
 
 " Coloring
 color material
@@ -93,6 +100,10 @@ set timeoutlen=150
 set cursorline
 set clipboard+=unnamedplus
 
+
+
+
+
 " Plugin Configurations
 
 " Airline
@@ -104,8 +115,8 @@ let g:airline#extensions#tabline#enabled = 0
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#left_alt_sep = ''
-"let g:airline_left_sep = ''
-"let g:airline_right_sep = ''
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
 
 " Neovim :Terminal
 tmap <Esc> <C-\><C-n>
@@ -115,7 +126,7 @@ autocmd BufWinEnter,WinEnter term://* startinsert
 autocmd BufLeave term://* stopinsert
 
 " Disable documentation window
-set completeopt-=longest,menuone
+set completeopt=menuone,noinsert,noselect
 
 " Supertab
 let g:SuperTabDefaultCompletionType = "<C-n>"
@@ -130,16 +141,14 @@ let g:indentLine_char = '▏'
 let g:indentLine_color_gui = '#363949'
 
 " Closetag
-let g:closetag_filetypes = 'html,xhtml,phtml,vue'
+let g:closetag_filetypes = 'html,xhtml,phtml,vue,js'
 
 " Bufferline Lua
-lua << EOF
+:lua << EOF
 require'bufferline'.setup{
   options = {
     view = "default",
     numbers = "none",
-    number_style = "",
-    mappings = false,
     buffer_close_icon= '',
     modified_icon = '●',
     close_icon = '',
@@ -213,6 +222,42 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
+" LSP Standard Configuration
+:lua << EOF
+  local nvim_lsp = require('lspconfig')
+  local servers = {'pyright', 'tsserver', 'intelephense'}
+
+  local on_attach = function(client, bufnr)
+    require('completion').on_attach()
+  end
+
+  for _, lsp in ipairs(servers) do
+    nvim_lsp[lsp].setup {
+      on_attach = on_attach,
+    }
+  end
+EOF
+
+" LSP Completion
+let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
+
+" LSP Saga
+:lua << EOF
+  local saga = require('lspsaga')
+
+  saga.init_lsp_saga {
+    error_sign = '',
+    warn_sign = '',
+    hint_sign = '',
+    infor_sign = '',
+    border_style = "single",
+  }
+EOF
+
+
+
+
+
 " Filetype-Specific Configurations
 autocmd FileType python nmap <leader>x :0,$!~/.config/nvim/env/bin/python -m yapf<CR>
 
@@ -246,6 +291,7 @@ nmap <leader>sv <C-w>v<C-w>l:terminal<CR>
 nmap <leader>f :Files /<CR>
 nmap <leader>j :set filetype=journal<CR>
 nmap <leader>k :ColorToggle<CR>
+nnoremap <silent>K :Lspsaga hover_doc<CR>
 
 " Save files with ,w
 :nmap <c-s> :w<CR>
