@@ -4,6 +4,7 @@
 
 🆎 **Fonts:**
 * JetBrains Monospaced
+* FiraCode
 * Cascadia Code
 * Input
 * Poppins
@@ -46,14 +47,13 @@
 | Zsh / Bash | Shells |
 | Oh My Zsh | Shells |
 | [Alacritty](https://github.com/alacritty/alacritty)|Terminal emulator|
-| [Shutter](https://shutter-project.org/)|Screenshots|
-| [Ksnip](https://github.com/ksnip/ksnip)|Screenshots|
+| [Konsole](https://github.com/KDE/konsole)|Terminal emulator|
 | Brave|Browser|
 | Firefox Developer|Browser|
 | [Rofi](https://github.com/davatorium/rofi)|Application launcher|
 | [Neovim >=0.5](https://github.com/neovim/neovim)|Text editor|
 | [Visual Studio Code](https://github.com/microsoft/vscode)| Text editor|
-| [Nomacs](https://github.com/nomacs/nomacs)|Image viewer|
+| [LXImage-QT](https://github.com/lxqt/lximage-qt)|Screenshots and Image Viewer|
 | [Feh](https://github.com/derf/feh) |Image viewer|
 | [Dolphin](https://github.com/KDE/dolphin)| File manager|
 | qt5ct | Appareance for QT apps|
