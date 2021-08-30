@@ -17,7 +17,7 @@ naughty.config.defaults.margin = dpi(16)
 naughty.config.defaults.border_width = 0
 naughty.config.defaults.position = 'top_right'
 naughty.config.defaults.shape = function(cr, w, h)
-	gears.shape.rounded_rect(cr, w, h, dpi(6))
+	gears.shape.rounded_rect(cr, w, h, dpi(10))
 end
 
 -- Apply theme variables

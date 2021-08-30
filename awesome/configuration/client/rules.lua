@@ -30,22 +30,22 @@ ruled.client.connect_signal(
 			}
 		}
 	
-		[[--ruled.client.append_rule {
+		ruled.client.append_rule {
 			id = 'round_clients',
 			rule_any = {
 				type = {
 					'normal',
-					'dialog'
+					'dialog',
 				}
 			},
 			except_any  = {
-				name = {'Discord Updater'}
+				--name = {'Discord Updater'}
 			},
 			properties = {
 				round_corners = true,
 				shape = beautiful.client_shape_rounded
 			}
-		}--]]
+		}
 
 		-- Titlebar rules
 		ruled.client.append_rule {
