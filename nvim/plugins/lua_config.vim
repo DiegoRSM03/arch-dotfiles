@@ -47,6 +47,6 @@ EOF
     warn_sign = '',
     hint_sign = '',
     infor_sign = '',
-    border_style = "single",
+    border_style = "round",
   }
 EOF

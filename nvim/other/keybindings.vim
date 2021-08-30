@@ -6,6 +6,8 @@ nmap <leader>sv <C-w>v<C-w>l:terminal<CR>
 nmap <leader>j :set filetype=journal<CR>
 nmap <leader>k :ColorToggle<CR>
 nnoremap <silent>K :Lspsaga hover_doc<CR>
+inoremap <silent> <C-k> <Cmd>Lspsaga signature_help<CR>
+nnoremap <silent> <C-k> <Cmd>Lspsaga signature_help<CR>
 nnoremap <leader>f <cmd>Telescope find_files<cr>
 
 " Save files with ,w
