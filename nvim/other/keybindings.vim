@@ -1,6 +1,5 @@
 let mapleader=","
 
-nmap <leader>e :Colors<CR>
 nmap <leader>r :so ~/.config/nvim/init.vim<CR>
 nmap <leader>sh <C-w>s<C-w>j:terminal<CR>
 nmap <leader>sv <C-w>v<C-w>l:terminal<CR>
