@@ -6,7 +6,7 @@ return {
 	-- The default applications that we will use in keybindings and widgets
 	default = {
 		-- Default terminal emulator
-		terminal = 'alacritty',
+		terminal = 'konsole',
 		-- Default web browser
 		web_browser = 'brave',
 		-- Default text editor

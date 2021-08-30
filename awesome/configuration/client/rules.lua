@@ -117,7 +117,7 @@ ruled.client.connect_signal(
 			},
 			properties = {
 				titlebars_enabled = false,
-				round_corners = false,
+				round_corners = true,
 				floating = true,
 				above = true,
 				skip_decoration = true,
