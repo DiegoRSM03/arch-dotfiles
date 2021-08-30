@@ -4,51 +4,60 @@ local beautiful = require('beautiful')
 local icons = require('theme.icons')
 local apps = require('configuration.apps')
 
+--layout = awful.layout.suit.tile
+--layout = awful.layout.suit.floating
+--layout = awful.layout.suit.max,
+--gap = beautiful.useless_gap,
 local tags = {
 	{
 		type = 'terminal',
 		icon = icons.terminal,
 		default_app = apps.default.terminal,
-		gap = beautiful.useless_gap
+    layout = awful.layout.suit.max,
+    gap = 0
 	},
 	{
 		type = 'internet',
 		icon = icons.web_browser,
 		default_app = apps.default.web_browser,
-		gap = beautiful.useless_gap
+    layout = awful.layout.suit.max,
+    gap = 0
 	},
 	{
 		type = 'code',
 		icon = icons.text_editor,
 		default_app = apps.default.text_editor,
-		gap = beautiful.useless_gap
+    layout = awful.layout.suit.max,
+    gap = 0
 	},
 	{
 		type = 'files',
 		icon = icons.file_manager,
 		default_app = apps.default.file_manager,
-		gap = beautiful.useless_gap,
-		--layout = awful.layout.suit.tile
+    layout = awful.layout.suit.max,
+    gap = 0
 	},
 	{
 		type = 'games',
 		icon = icons.games,
 		default_app = apps.default.game,
-		gap = beautiful.useless_gap,
-		--layout = awful.layout.suit.floating
+    layout = awful.layout.suit.max,
+    gap = 0
 	},
 	{
 		type = 'graphics',
 		icon = icons.graphics,
 		default_app = apps.default.graphics,
-		gap = beautiful.useless_gap
+    layout = awful.layout.suit.max,
+    gap = 0
+
 	},
 	{
 		type = 'sandbox',
 		icon = icons.sandbox,
 		default_app = apps.default.sandbox,
-		--layout = awful.layout.suit.max,
-		--gap = 0
+    layout = awful.layout.suit.max,
+    gap = 0
 	},
 	--{
 		--type = 'multimedia',
