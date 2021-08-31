@@ -11,7 +11,7 @@ source ~/.config/nvim/other/triggers.vim
 source ~/.config/nvim/other/keybindings.vim
 
 " Theme
-color material
+color vim-monokai-tasty
 
 " Colorscheme configs
 let g:quantum_black=1

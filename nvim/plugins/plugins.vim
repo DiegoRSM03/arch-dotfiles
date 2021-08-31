@@ -18,6 +18,7 @@ Plug 'drewtempelmeyer/palenight.vim'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'tyrannicaltoucan/vim-quantum'
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
+Plug 'patstockwell/vim-monokai-tasty'
 
 " Neovim 0.5 Features (LSP, Telescope)
 Plug 'neovim/nvim-lspconfig'
