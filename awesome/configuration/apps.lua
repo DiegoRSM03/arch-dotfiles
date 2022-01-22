@@ -6,9 +6,9 @@ return {
 	-- The default applications that we will use in keybindings and widgets
 	default = {
 		-- Default terminal emulator
-		terminal = 'konsole',
+		terminal = 'alacritty',
 		-- Default web browser
-		web_browser = 'brave',
+		web_browser = 'firefox-developer-edition',
 		-- Default text editor
 		text_editor = 'nvim',
 		-- Default file manager
