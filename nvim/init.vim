@@ -3,7 +3,7 @@ syntax on
 " Plugins
 source ~/.config/nvim/plugins/plugins.vim
 source ~/.config/nvim/plugins/native_config.vim
-source ~/.config/nvim/plugins/lua_config.vim
+source ~/.config/nvim/plugins/lua_config.lua
 
 " Other Configurations
 source ~/.config/nvim/other/elements_highlight.vim
@@ -11,7 +11,8 @@ source ~/.config/nvim/other/triggers.vim
 source ~/.config/nvim/other/keybindings.vim
 
 " Theme
-color vim-monokai-tasty
+"color vim-monokai-tasty
+color material
 
 " Colorscheme configs
 let g:quantum_black=1
@@ -37,7 +38,7 @@ set encoding=utf-8
 set number relativenumber
 set title
 set splitright splitbelow
-set timeoutlen=150
+set timeoutlen=250
 set cursorline
 set clipboard+=unnamedplus
 set completeopt=menuone,noinsert,noselect

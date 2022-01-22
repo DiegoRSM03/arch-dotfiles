@@ -5,10 +5,17 @@ nmap <leader>sh <C-w>s<C-w>j:terminal<CR>
 nmap <leader>sv <C-w>v<C-w>l:terminal<CR>
 nmap <leader>j :set filetype=journal<CR>
 nmap <leader>k :ColorToggle<CR>
+
+" LSP
 nnoremap <silent>K :Lspsaga hover_doc<CR>
 inoremap <silent> <C-k> <Cmd>Lspsaga signature_help<CR>
 nnoremap <silent> <C-k> <Cmd>Lspsaga signature_help<CR>
-nnoremap <leader>f <cmd>Telescope find_files<cr>
+
+" Telescope
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
 " Save files with ,w
 :nmap <c-s> :w<CR>
@@ -38,4 +45,5 @@ nnoremap <leader>x :NvimTreeFindFile<CR>
 nmap <Tab> :BufferLineCycleNext<CR>
 nmap <S-Tab> :BufferLineCyclePrev<CR>
 
+" Close current buffer
 nmap <leader>q :bdelete<CR>

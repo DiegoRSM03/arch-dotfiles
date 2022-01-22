@@ -1,8 +1,7 @@
 call plug#begin()
 
 " Aesthetics - Main
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'nvim-lualine/lualine.nvim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'junegunn/vim-journal'
@@ -22,10 +21,14 @@ Plug 'patstockwell/vim-monokai-tasty'
 
 " Neovim 0.5 Features (LSP, Telescope)
 Plug 'neovim/nvim-lspconfig'
-Plug 'nvim-lua/completion-nvim'
 Plug 'glepnir/lspsaga.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+
+" LSP Completion with COQ
+Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
+Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
+Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
 
 " Functionalities
 Plug 'scrooloose/nerdcommenter'
@@ -38,5 +41,6 @@ Plug 'Yggdroot/indentLine'
 Plug 'alvan/vim-closetag'
 Plug 'wellle/targets.vim'
 Plug 'cometsong/CommentFrame.vim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 call plug#end()
