@@ -1,11 +1,11 @@
 #!/bin/bash
 
-sh ~/Scripts/monitors-setup                                                 # Configuration for monitors
-feh --bg-scale /usr/share/backgrounds/aether/macos-monterey-dark.jpg        # Set custom background image
+#sh ~/Scripts/monitors-setup                                                # Configuration for monitors
+feh --bg-scale /usr/share/backgrounds/custom/macos-monterey-dark.jpg        # Set custom background image
 setxkbmap us                                                                # Set keyboard layout to latam
 picom --experimental-backends &                                             # Blur effect in clients
-xinput disable "$(xinput list --name-only | grep TouchPad)"                 # Disable TouchPad
-numlockx on                                                                 # Enable NumLock on startup
+#xinput disable "$(xinput list --name-only | grep TouchPad)"                 # Disable TouchPad
+#numlockx on                                                                 # Enable NumLock on startup
 #plank &                                                                    # Init plank on start
 
 export QT_SELECT=5 

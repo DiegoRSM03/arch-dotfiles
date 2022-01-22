@@ -3,11 +3,10 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/diego/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Enable NVM
-export NVM_DIR=~/.nvm
- [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+source /usr/share/nvm/init-nvm.sh
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 
@@ -115,6 +114,7 @@ alias nvimconfig="nvim ~/.config/nvim/init.vim"
 alias alacrittyconfig="nvim ~/.config/alacritty/alacritty.yml"
 
 alias sunvim="sudo -E nvim"
+alias gtrepos="cd $HOME/Projects"
 
 alias touchpad-on="xinput enable '$(xinput list --name-only | grep TouchPad)'"
 alias touchpad-off="xinput disable '$(xinput list --name-only | grep TouchPad)'"
