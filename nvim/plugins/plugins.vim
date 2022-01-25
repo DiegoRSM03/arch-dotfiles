@@ -42,5 +42,8 @@ Plug 'alvan/vim-closetag'
 Plug 'wellle/targets.vim'
 Plug 'cometsong/CommentFrame.vim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'lewis6991/gitsigns.nvim'
+Plug 'akinsho/toggleterm.nvim'
+Plug 'APZelos/blamer.nvim'
 
 call plug#end()

@@ -1,3 +1,9 @@
+-- Toggleterm
+require("toggleterm").setup{}
+
+-- Git Signs
+require('gitsigns').setup()
+
 -- Bufferline Lua
 require'bufferline'.setup{
   options = {

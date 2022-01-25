@@ -17,6 +17,10 @@ nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
+" Terminal management
+nnoremap <leader>t <cmd>ToggleTerm<CR>
+tnoremap <Esc> <cmd>ToggleTerm<CR>
+
 " Save files with ,w
 :nmap <c-s> :w<CR>
 :imap <c-s> <Esc>:w<CR>
