@@ -1,15 +1,14 @@
 let mapleader=","
 
 nmap <leader>r :so ~/.config/nvim/init.vim<CR>
-nmap <leader>sh <C-w>s<C-w>j:terminal<CR>
-nmap <leader>sv <C-w>v<C-w>l:terminal<CR>
 nmap <leader>j :set filetype=journal<CR>
-nmap <leader>k :ColorToggle<CR>
 
 " LSP
-nnoremap <silent>K :Lspsaga hover_doc<CR>
-inoremap <silent> <C-k> <Cmd>Lspsaga signature_help<CR>
-nnoremap <silent> <C-k> <Cmd>Lspsaga signature_help<CR>
+nnoremap <silent>gk <cmd>lua require('lspsaga.hover').render_hover_doc()<CR>
+nnoremap <silent>gr <cmd>lua require('lspsaga.rename').rename()<CR>
+nnoremap <silent>gs <cmd>lua require('lspsaga.signaturehelp').signature_help()<CR>
+nnoremap <silent>gc <cmd>lua require('lspsaga.provider').lsp_finder()<CR>
+nnoremap <silent>gh <cmd>lua require('lspsaga.diagnostic').show_cursor_diagnostics()<CR>
 
 " Telescope
 nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
@@ -30,15 +29,8 @@ nmap <silent> <leader><leader> :noh<CR>
 :imap jf <Esc>
 
 " Popup like IDE
-:inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
-  \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
-inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
-  \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
-inoremap <expr> <C-Space> (pumvisible() ? (col('.') > 1 ? '<Esc>i<Right>' : '<Esc>i') : '') .
-  \ '<C-x><C-o><C-r>=pumvisible() ? "\<lt>C-n>\<lt>C-p>\<lt>Down>" : ""<CR>'
-inoremap <expr> <S-Space> (pumvisible() ? (col('.') > 1 ? '<Esc>i<Right>' : '<Esc>i') : '') .
-  \ '<C-x><C-u><C-r>=pumvisible() ? "\<lt>C-n>\<lt>C-p>\<lt>Down>" : ""<CR>'
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " NvimTreeOpen and NvimTreeClose are also available if you need them
 nnoremap <leader>v :NvimTreeToggle<CR>

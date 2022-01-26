@@ -11,4 +11,4 @@ let g:indentLine_color_gui = '#363949'
 let g:closetag_filetypes = 'html,xhtml,phtml,vue,js'
 
 " COQ Completion
-let g:coq_settings = { 'auto_start': v:true }
+let g:coq_settings = { 'display.icons.mode': 'short', 'auto_start': v:true }

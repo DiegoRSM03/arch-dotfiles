@@ -21,7 +21,7 @@ Plug 'patstockwell/vim-monokai-tasty'
 
 " Neovim 0.5 Features (LSP, Telescope)
 Plug 'neovim/nvim-lspconfig'
-Plug 'glepnir/lspsaga.nvim'
+Plug 'tami5/lspsaga.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
@@ -34,7 +34,6 @@ Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
 Plug 'scrooloose/nerdcommenter'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'akinsho/nvim-bufferline.lua'
-Plug 'ervandew/supertab'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'Yggdroot/indentLine'
